@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Love Letter</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#ff6b8b',secondary:'#f8c3cd'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Montserrat', sans-serif;
+background-color: #fff8f8;
+}
+.cursive {
+font-family: 'Dancing Script', cursive;
+}
+.paper {
+background-color: #fffaf0;
+background-image:
+linear-gradient(90deg, transparent 79px, #ffcdd2 79px, #ffcdd2 81px, transparent 81px),
+linear-gradient(#eee .1em, transparent .1em);
+background-size: 100% 1.2em;
+}
+.floating-heart {
+animation: float 6s ease-in-out infinite;
+position: absolute;
+opacity: 0.7;
+}
+@keyframes float {
+0% { transform: translateY(0) rotate(0deg); }
+50% { transform: translateY(-20px) rotate(5deg); }
+100% { transform: translateY(0) rotate(0deg); }
+}
+.sparkle {
+position: absolute;
+width: 8px;
+height: 8px;
+border-radius: 50%;
+background-color: #fff;
+box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8);
+animation: sparkle 2s ease-in-out infinite;
+}
+@keyframes sparkle {
+0% { opacity: 0; transform: scale(0); }
+50% { opacity: 1; transform: scale(1); }
+100% { opacity: 0; transform: scale(0); }
+}
+.ribbon {
+background: linear-gradient(45deg, #ff6b8b, #ffb6c1);
+position: relative;
+}
+.ribbon::before, .ribbon::after {
+content: '';
+position: absolute;
+width: 20px;
+height: 20px;
+background-color: #ff6b8b;
+bottom: -10px;
+z-index: -1;
+}
+.ribbon::before {
+left: 0;
+transform: skewY(45deg);
+}
+.ribbon::after {
+right: 0;
+transform: skewY(-45deg);
+}
+input:focus, textarea:focus {
+outline: none;
+box-shadow: 0 0 0 3px rgba(255, 107, 139, 0.3);
+}
+.heart-bullet::before {
+content: '❤';
+color: #ff6b8b;
+margin-right: 8px;
+}
+.heart-border {
+background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 17.8c-.3 0-.5-.1-.7-.3L2.3 10.5c-1.5-1.5-1.5-3.8 0-5.3 1.5-1.5 3.8-1.5 5.3 0L10 7.6l2.4-2.4c1.5-1.5 3.8-1.5 5.3 0 1.5 1.5 1.5 3.8 0 5.3l-7 7c-.2.2-.4.3-.7.3z' fill='%23ff6b8b' fill-opacity='0.2'/%3E%3C/svg%3E");
+background-repeat: repeat-x;
+background-position: bottom;
+padding-bottom: 20px;
+}
+</style>
+</head>
+<body class="min-h-screen flex flex-col items-center">
+<div class="relative w-full overflow-hidden">
+<!-- Floating hearts -->
+<div class="floating-heart text-primary text-4xl" style="top: 10%; left: 5%; animation-delay: 0s;">❤</div>
+<div class="floating-heart text-secondary text-2xl" style="top: 15%; left: 20%; animation-delay: 1s;">❤</div>
+<div class="floating-heart text-primary text-3xl" style="top: 8%; left: 80%; animation-delay: 2s;">❤</div>
+<div class="floating-heart text-secondary text-xl" style="top: 20%; left: 90%; animation-delay: 3s;">❤</div>
+<div class="floating-heart text-primary text-2xl" style="top: 25%; left: 40%; animation-delay: 4s;">❤</div>
+<!-- Sparkles -->
+<div class="sparkle" style="top: 12%; left: 10%; animation-delay: 0.5s;"></div>
+<div class="sparkle" style="top: 8%; left: 30%; animation-delay: 1.5s;"></div>
+<div class="sparkle" style="top: 15%; left: 70%; animation-delay: 2.5s;"></div>
+<div class="sparkle" style="top: 20%; left: 85%; animation-delay: 3.5s;"></div>
+</div>
+<header class="w-full max-w-5xl px-6 py-8 text-center">
+<div class="w-32 h-32 mx-auto mb-4 relative">
+<svg viewBox="0 0 100 100" class="w-full h-full fill-primary">
+<path d="M50,20 C55,10 65,10 75,20 C85,30 85,40 75,60 C65,80 55,90 50,100 C45,90 35,80 25,60 C15,40 15,30 25,20 C35,10 45,10 50,20 Z"></path>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center text-white cursive text-xl">Love</div>
+</div>
+<h1 class="cursive text-5xl text-primary mb-2">My Love Letter</h1>
+<p class="text-gray-600 italic">Express your deepest feelings with beautiful words</p>
+</header>
+<main class="w-full max-w-4xl px-6 py-8 flex-grow">
+<div class="relative bg-white rounded-xl shadow-xl overflow-hidden mb-10 transform hover:scale-[1.01] transition-transform duration-300">
+<!-- Ribbon decoration -->
+<div class="ribbon h-6 w-full"></div>
+<div class="p-8">
+<div class="paper rounded-lg p-8 shadow-inner relative">
+<!-- Corner hearts -->
+<div class="absolute top-2 left-2 text-primary opacity-50">❤</div>
+<div class="absolute top-2 right-2 text-primary opacity-50">❤</div>
+<div class="absolute bottom-2 left-2 text-primary opacity-50">❤</div>
+<div class="absolute bottom-2 right-2 text-primary opacity-50">❤</div>
+<!-- Letter content -->
+<div class="mb-6">
+<label for="recipient" class="block mb-2 cursive text-2xl text-gray-700">Dear...</label>
+<input type="text" id="recipient" class="w-full border-none bg-transparent cursive text-2xl text-gray-800 p-0" placeholder="Sweetheart">
+</div>
+<div class="mb-6">
+<textarea id="letter-content" rows="10" class="w-full border-none bg-transparent text-gray-800 resize-none" placeholder="Write your heartfelt message here...">My dearest one,
+As I sit here thinking of you, my heart fills with warmth and joy. Every moment we spend together feels like a beautiful dream I never want to wake from.
+You've brought colors into my life I never knew existed. Your smile brightens even my darkest days, and your laughter is the sweetest melody to my ears.
+I cherish every memory we've created together, from our first meeting to our most recent adventure. Each one is a treasure I hold close to my heart.
+With all my love,</textarea>
+</div>
+<div class="mb-6">
+<input type="text" id="signature" class="w-full border-none bg-transparent cursive text-2xl text-right text-gray-800 p-0" placeholder="Your name">
+</div>
+<div class="text-right text-gray-500 text-sm">
+May 9, 2025
+</div>
+</div>
+</div>
+</div>
+<!-- Controls section -->
+<div class="bg-white rounded-xl shadow-lg p-6 mb-10">
+<h2 class="cursive text-2xl text-primary mb-4">Customize Your Letter</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block mb-2 text-gray-700">Text Color</label>
+<div class="flex space-x-3">
+<button class="w-8 h-8 rounded-full bg-pink-500 border-2 border-white shadow-md hover:scale-110 transition-transform" data-color="#f472b6"></button>
+<button class="w-8 h-8 rounded-full bg-red-500 border-2 border-white shadow-md hover:scale-110 transition-transform" data-color="#ef4444"></button>
+<button class="w-8 h-8 rounded-full bg-purple-500 border-2 border-white shadow-md hover:scale-110 transition-transform" data-color="#8b5cf6"></button>
+<button class="w-8 h-8 rounded-full bg-blue-500 border-2 border-white shadow-md hover:scale-110 transition-transform" data-color="#3b82f6"></button>
+<button class="w-8 h-8 rounded-full bg-gray-700 border-2 border-white shadow-md hover:scale-110 transition-transform" data-color="#374151"></button>
+</div>
+</div>
+<div>
+<label class="block mb-2 text-gray-700">Love Suggestions</label>
+<div class="flex flex-wrap gap-2">
+<button class="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm hover:bg-pink-200 transition-colors !rounded-button whitespace-nowrap">I miss you</button>
+<button class="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm hover:bg-pink-200 transition-colors !rounded-button whitespace-nowrap">Forever yours</button>
+<button class="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm hover:bg-pink-200 transition-colors !rounded-button whitespace-nowrap">My soulmate</button>
+<button class="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm hover:bg-pink-200 transition-colors !rounded-button whitespace-nowrap">You complete me</button>
+</div>
+</div>
+</div>
+<div class="mt-6">
+<label class="block mb-2 text-gray-700">Decorative Elements</label>
+<div class="flex flex-wrap gap-3">
+<button class="border border-gray-200 rounded-lg p-3 hover:bg-pink-50 transition-colors flex items-center justify-center">
+<span class="w-6 h-6 flex items-center justify-center text-primary">❤</span>
+</button>
+<button class="border border-gray-200 rounded-lg p-3 hover:bg-pink-50 transition-colors flex items-center justify-center">
+<span class="w-6 h-6 flex items-center justify-center text-primary">💐</span>
+</button>
+<button class="border border-gray-200 rounded-lg p-3 hover:bg-pink-50 transition-colors flex items-center justify-center">
+<span class="w-6 h-6 flex items-center justify-center text-primary">💕</span>
+</button>
+<button class="border border-gray-200 rounded-lg p-3 hover:bg-pink-50 transition-colors flex items-center justify-center">
+<span class="w-6 h-6 flex items-center justify-center text-primary">🌹</span>
+</button>
+<button class="border border-gray-200 rounded-lg p-3 hover:bg-pink-50 transition-colors flex items-center justify-center">
+<span class="w-6 h-6 flex items-center justify-center text-primary">✨</span>
+</button>
+<button class="border border-gray-200 rounded-lg p-3 hover:bg-pink-50 transition-colors flex items-center justify-center">
+<span class="w-6 h-6 flex items-center justify-center text-primary">💌</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Action buttons -->
+<div class="flex flex-wrap gap-4 justify-center">
+<button class="bg-primary text-white px-6 py-3 rounded-lg shadow-lg hover:bg-opacity-90 transition-colors flex items-center !rounded-button whitespace-nowrap">
+<i class="ri-heart-fill mr-2"></i>
+Send Love
+</button>
+<button class="bg-white text-primary border border-primary px-6 py-3 rounded-lg shadow-lg hover:bg-pink-50 transition-colors flex items-center !rounded-button whitespace-nowrap">
+<i class="ri-save-line mr-2"></i>
+Save Draft
+</button>
+<button class="bg-white text-gray-700 border border-gray-300 px-6 py-3 rounded-lg shadow-lg hover:bg-gray-50 transition-colors flex items-center !rounded-button whitespace-nowrap">
+<i class="ri-printer-line mr-2"></i>
+Print
+</button>
+<button class="bg-white text-gray-700 border border-gray-300 px-6 py-3 rounded-lg shadow-lg hover:bg-gray-50 transition-colors flex items-center !rounded-button whitespace-nowrap">
+<i class="ri-share-line mr-2"></i>
+Share
+</button>
+</div>
+</main>
+<footer class="w-full max-w-4xl px-6 py-8 text-center">
+<div class="heart-border mb-4">
+<p class="cursive text-gray-600">Sealed with love</p>
+</div>
+<p class="text-sm text-gray-500">© 2025 Love Letter Creator. Made with ❤</p>
+</footer>
+<style>
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    .paper, .paper * {
+        visibility: visible;
+    }
+    .paper {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        padding: 40px;
+        box-shadow: none !important;
+        background: white !important;
+    }
+    .ribbon, .sparkle, .floating-heart {
+        display: none !important;
+    }
+}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+// Color picker functionality
+const colorButtons = document.querySelectorAll('[data-color]');
+const letterContent = document.getElementById('letter-content');
+colorButtons.forEach(button => {
+button.addEventListener('click', function() {
+const color = this.getAttribute('data-color');
+letterContent.style.color = color;
+});
+});
+// Love suggestions functionality
+const suggestionButtons = document.querySelectorAll('.bg-pink-100.text-pink-800');
+suggestionButtons.forEach(button => {
+button.addEventListener('click', function() {
+const suggestion = this.textContent;
+letterContent.value += "\n\n" + suggestion;
+});
+});
+// Decorative elements functionality
+const decorButtons = document.querySelectorAll('.border.border-gray-200.rounded-lg');
+decorButtons.forEach(button => {
+button.addEventListener('click', function() {
+const emoji = this.querySelector('span').textContent;
+letterContent.value = letterContent.value.replace(/\n\n$/, '') + "\n\n" + emoji + " " + emoji + " " + emoji;
+});
+});
+// Print functionality
+const printButton = document.querySelector('.ri-printer-line').parentElement;
+printButton.addEventListener('click', function() {
+window.print();
+});
+});
+</script>
+</body>
+</html>
